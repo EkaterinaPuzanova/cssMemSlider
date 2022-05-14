@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'Fave';
+	src: url('assets/fonts/Fave-Script.woff2'), url('./assets/fonts/Fave-Script.woff');
+	font-weight: 400;
+	font-style: normal;
+    font-display: swap;
+}
+
+
+html {
+	scroll-behavior: smooth; 
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Fave'; 
+}
