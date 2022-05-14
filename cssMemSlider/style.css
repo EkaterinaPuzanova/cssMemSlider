@@ -108,3 +108,19 @@ p {
     padding-left: 5px;
     margin-top: 1vw;
 }
+
+#radio1:checked ~ .slides .checked {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .slides .checked {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .slides .checked {
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .slides .checked {
+    margin-left: -75%;
+}
