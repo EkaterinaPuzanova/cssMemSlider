@@ -124,3 +124,10 @@ p {
 #radio4:checked ~ .slides .checked {
     margin-left: -75%;
 }
+
+#radio1:checked ~ .navigation .bar1,
+#radio2:checked ~ .navigation .bar2,
+#radio3:checked ~ .navigation .bar3,
+#radio4:checked ~ .navigation .bar4 {
+    background-color: rgb(82, 88, 87);
+}
