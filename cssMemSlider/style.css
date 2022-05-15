@@ -131,3 +131,26 @@ p {
 #radio4:checked ~ .navigation .bar4 {
     background-color: rgb(82, 88, 87);
 }
+
+
+@media (min-width: 1500px) {
+    .navigation {
+        transform: translateY(-2vw);
+    }
+}
+
+@media (max-width: 1280px) {
+    .navigation {
+        padding-top: 0.2vw;
+    }
+}
+
+@media (max-width: 540px) {
+    p {
+        margin-top: 6vw;
+    }
+    .navigation {
+        padding-left: 0;
+        margin-left: calc(50% - 8.5vw);
+    }
+}
