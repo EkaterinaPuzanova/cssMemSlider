@@ -1,0 +1,156 @@
+@font-face {
+	font-family: 'Fave';
+	src: url('assets/fonts/Fave-Script.woff2'), url('./assets/fonts/Fave-Script.woff');
+	font-weight: 400;
+	font-style: normal;
+    font-display: swap;
+}
+
+
+html {
+	scroll-behavior: smooth; 
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(141, 148, 146);
+}
+
+.slider-wrapper {
+    margin: 0 auto;
+    margin-top: 2vh;
+    width: 90vw;
+    max-width: 1000px; 
+    height: 98vh;
+    overflow: hidden;
+}
+
+.navigation {
+    margin-left: calc(100% - 27vw + 1vw);
+    padding-left: 30px;
+    padding-top: 1vw;
+    width: 27vw;
+    height: 5vw;
+    display: flex;
+    transform: translateY(-3vw);
+    background-color: rgb(141, 148, 146);
+    
+}
+
+.area {
+    border: 1vw solid rgb(141, 148, 146);
+}
+
+.bar {
+    height: 2.5vw;
+    width: 10vw;
+    margin: 0.6vw;
+    cursor: pointer;
+    background-color: #fff;
+    opacity: .8;
+    border-radius: 2vw;
+    transition: all 0.2s ease-out;
+}
+
+.bar:hover {
+    opacity: 0.8;
+    transform: scale(1.3);
+}
+
+
+
+.bar:active {
+    animation: bar_animation 0.5s forwards;
+}
+
+@keyframes bar_animation {
+    0% {
+        background-color: #7e1414b6;
+    }
+    100% {
+        background-color: #0c0f41e0;
+    }
+}
+
+input {
+    visibility: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 50vw;
+    max-height: 543px;
+    display: flex;
+}
+
+.slide {
+    width: 25%;
+    transition: all .6s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 90%;
+    border: 5px solid #fff;
+    border-radius: 10px;
+} 
+
+p {
+    font-family: 'Fave';
+    font-size: 4vw;
+    color: #fff;
+    padding-left: 5px;
+    margin-top: 1vw;
+}
+
+#radio1:checked ~ .slides .checked {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .slides .checked {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .slides .checked {
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .slides .checked {
+    margin-left: -75%;
+}
+
+#radio1:checked ~ .navigation .bar1,
+#radio2:checked ~ .navigation .bar2,
+#radio3:checked ~ .navigation .bar3,
+#radio4:checked ~ .navigation .bar4 {
+    background-color: rgb(82, 88, 87);
+}
+
+
+@media (min-width: 1500px) {
+    .navigation {
+        transform: translateY(-2vw);
+    }
+}
+
+@media (max-width: 1280px) {
+    .navigation {
+        padding-top: 0.2vw;
+    }
+}
+
+@media (max-width: 540px) {
+    p {
+        margin-top: 6vw;
+    }
+    .navigation {
+        padding-left: 0;
+        margin-left: calc(50% - 8.5vw);
+    }
+}
